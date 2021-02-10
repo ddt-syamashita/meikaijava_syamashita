@@ -1,0 +1,2 @@
+module meikai_java {
+}
