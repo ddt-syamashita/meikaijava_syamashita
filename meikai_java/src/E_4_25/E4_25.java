@@ -36,15 +36,15 @@ public class E4_25 {
 			int t = stdIn.nextInt();
 
 			//List 4-17と同様に0が入力された際の
-			if (t == 0)
+			if (t == 0) {
 				//0が入力された場合、ループを終了させる
 				break;
+			}
 			//入力された整数値の合計が1000より大きくなった場合
 			if (sum + t > 1000) {
 				//ループ処理を終了の文言を出力させる
 				System.out.println("合計が1,000を超えました。");
 				System.out.println("最後の数値は無視します。");
-
 
 				//ループ処理を終了させるため、breakを定義する
 				break;

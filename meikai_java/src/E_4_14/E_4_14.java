@@ -19,7 +19,7 @@ public class E_4_14 {
 		Scanner standardInput = new Scanner(System.in);
 
 		//数値入力を促す文言を出力
-		System.out.println("nの値：");
+		System.out.print("nの値：");
 
 		//読み込んだ値をコンソールに出力させるため代入
 		int inputNumber = standardInput.nextInt();
@@ -28,10 +28,10 @@ public class E_4_14 {
 		int total = 0;
 
 		//繰り返した回数を格納する変数を定義
-		int count;
+		int count = 1;
 
 		//1から読み込んだ値まで繰り返す
-		for (count = 1; count <= inputNumber; count++) {
+		for (; count <= inputNumber; count++) {
 			//読み込んだ値の直前まで繰り返した場合
 			if (count < inputNumber) {
 				//直前まで繰り返した値を式として出力させる

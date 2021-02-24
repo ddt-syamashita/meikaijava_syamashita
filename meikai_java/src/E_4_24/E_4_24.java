@@ -27,15 +27,21 @@ public class E_4_24 {
 		//入力された値を出力させるため、int型変数に代入
 		int inputNumber = standardInput.nextInt();
 
+		//入力された値が2より小さい場合
+		if (inputNumber < 2) {
+			//素数ではない文言を出力させる
+			System.out.println(inputNumber + "は素数ではありません。");
+		}
+
 		//素数の求め方の2以上n未満条件まで繰り返す処理を定義する
-		for (int i = 2; i < inputNumber; i++) {
-			//入力された値が素数か判定する。いずれの数でも割り切れる場合
+		for (int i = 2; i <= inputNumber; i++) {
+			//入力された値が素数か判定する。いずれの数でも割り切れない場合
 			if (inputNumber % i == 0) {
 				//素数ではない文言を出力させる
-				System.out.println(inputNumber + "は素数ではありません");
+				System.out.println(inputNumber + "は素数ではありません。");
 				//出力した場合、ループ処理を終了させる
 				break;
-			//上記条件以外の場合。いずれの値でも割り切れない場合
+			//上記以外の場合、素数となる数値が入力されているため、文言を出力させる
 			} else {
 				System.out.println(inputNumber + "は素数です。");
 				//出力した場合、ループ処理を終了させる

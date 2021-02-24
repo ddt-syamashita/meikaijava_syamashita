@@ -36,21 +36,22 @@ public class E_4_19 {
 			} while (month <= 0 || month > 12);
 
 			//読み込んだ値が3～5の場合
-			if (month >= 3 && month <= 5)
+			if (month >= 3 && month <= 5) {
 				//対象の季節を案内する文言を出力する
 				System.out.println("それは春です。");
-			//読み込んだ値が6～8の場合
-			else if (month >= 6 && month <= 8)
+				//読み込んだ値が6～8の場合
+			} else if (month >= 6 && month <= 8) {
 				//対象の季節を案内する文言を出力する
 				System.out.println("それは夏です。");
-			//読み込んだ値が9～11の場合
-			else if (month >= 9 && month <= 11)
+				//読み込んだ値が9～11の場合
+			} else if (month >= 9 && month <= 11) {
 				//対象の季節を案内する文言を出力する
 				System.out.println("それは秋です。");
-			//読み込んだ値が12、または1、または2の場合
-			else if (month == 12 || month == 1 || month == 2)
+				//読み込んだ値が12、または1、または2の場合
+			} else if (month == 12 || month == 1 || month == 2) {
 				//対象の季節を案内する文言を出力する
 				System.out.println("それは冬です。");
+			}
 			//再入力を確認するための文言を出力
 			System.out.println("もう一度？ 1…Yes／0…No：");
 			//読み込んだ値によって、再入力するかを判定するため、読み込んだ値をretry変数に代入する

@@ -24,15 +24,15 @@ public class E_4_10 {
 		//読み込んだ値を変数に代入する
 		int input = stdIn.nextInt();
 
-
 		//読み込んだ値が1以上の場合
-		if(input >= 1) {
+		if (input >= 1) {
 			//読み込んだ値まで繰り返す
-			for (int i = 0; i < input; i++)
+			for (int i = 0; i < input; i++) {
 				//指定した文字列を出力
 				System.out.print("*");
-			//1未満であれば改行文字を出力しない
-			System.out.println();
+				//1未満であれば改行文字を出力しない
+				System.out.println();
+			}
 		}
 	}
 
