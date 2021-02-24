@@ -14,7 +14,6 @@ import java.util.Scanner;
 public class e_3_16 {
 
 	public static void main(String[] args) {
-		// TODO 自動生成されたメソッド・スタブ
 
 		//Scannerクラスをインスタンス化する
 		Scanner sc = new Scanner(System.in);
@@ -38,7 +37,7 @@ public class e_3_16 {
 		int data;
 
 		//1つ目の値より2つ目の値が小さい場合
-		if(input1 > input2) {
+		if (input1 > input2) {
 			//データをソートするため、仮に格納する変数に、1つ目の値を代入する
 			data = input1;
 			//2つ目の値を1つ目の変数に代入する
@@ -47,7 +46,7 @@ public class e_3_16 {
 			input2 = data;
 
 			//2つ目の値より3つ目の値が小さい場合
-			if(input2 > input3) {
+			if (input2 > input3) {
 				//2つ目の値を仮格納する変数に代入する
 				data = input2;
 				//2つ目の値を3つ目の値に代入する
@@ -56,7 +55,7 @@ public class e_3_16 {
 				input3 = data;
 			}
 			//最後に1つ目の値と2つ目の値を比較し、並べ替える
-			if(input1 > input2) {
+			if (input1 > input2) {
 				//データをソートするため、仮に格納する変数に、1つ目の値を代入する
 				data = input1;
 				//2つ目の値を1つ目の変数に代入する
@@ -66,7 +65,7 @@ public class e_3_16 {
 			}
 		}
 		//2つ目の値より3つ目の値が小さい場合
-		if(input2 > input3) {
+		if (input2 > input3) {
 			//データをソートするため、仮に格納する変数に、2つ目の値を代入する
 			data = input2;
 			//3つ目の値を2つ目の変数に代入する
@@ -75,7 +74,7 @@ public class e_3_16 {
 			input3 = data;
 
 			//1つ目の値より2つ目の値が小さい場合
-			if(input1 > input2) {
+			if (input1 > input2) {
 				//データをソートするため、仮に格納する変数に、1つ目の値を代入する
 				data = input1;
 				//2つ目の値を1つ目の変数に代入する

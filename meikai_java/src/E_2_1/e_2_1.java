@@ -11,7 +11,6 @@ package E_2_1;
 public class e_2_1 {
 
 	public static void main(String[] args) {
-		// TODO 自動生成されたメソッド・スタブ
 
 		//int型でxを定義する
 		int x;
@@ -25,6 +24,7 @@ public class e_2_1 {
 		//y = 45.5;
 
 		//考察結果→型の不一致: double から int には変換できません と表示されエラーとなる。
+		//（指摘修正）int型は、整数のみ代入できる。小数部を持つ実数値は代入することができない。
 
 	}
 

@@ -14,7 +14,6 @@ import java.util.Scanner;
 public class e_4_7 {
 
 	public static void main(String[] args) {
-		// TODO 自動生成されたメソッド・スタブ
 
 		//Scannerクラスをインスタンス化する
 		Scanner stdIn = new Scanner(System.in);
@@ -29,10 +28,10 @@ public class e_4_7 {
 		int count = 1;
 
 		//読み込んだ値の数だけ繰り返す
-		while(count <= input) {
+		while (count <= input) {
 
 			//cout変数が偶数の場合
-			if(count % 2 == 0) {
+			if (count % 2 == 0) {
 				//交互に表示させるため、「+」を表示させる。
 				System.out.print("+");
 			} else {

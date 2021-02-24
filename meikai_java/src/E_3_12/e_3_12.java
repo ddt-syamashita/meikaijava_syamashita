@@ -7,7 +7,6 @@
  * 作成日：2/2
  */
 
-
 package E_3_12;
 
 import java.util.Scanner;
@@ -15,7 +14,6 @@ import java.util.Scanner;
 public class e_3_12 {
 
 	public static void main(String[] args) {
-		// TODO 自動生成されたメソッド・スタブ
 
 		//Scannerクラスをインスタンス化する
 		Scanner sc = new Scanner(System.in);
@@ -42,10 +40,14 @@ public class e_3_12 {
 		min = input1;
 
 		//1つ目の値より2つ目の値が小さい場合、2つ目の値を最小値変数に代入
-		if(min > input2) min = input2;
+		if (min > input2) {
+			min = input2;
+		}
 
 		//3つ目の値が1,2目よりも値が小さい場合、3つ目の値を最小値変数に代入
-		if(min > input3) min = input3;
+		if (min > input3) {
+			min = input3;
+		}
 
 		//最小値を出力する
 		System.out.println("最小値：" + min);

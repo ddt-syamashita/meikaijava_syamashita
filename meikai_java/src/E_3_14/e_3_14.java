@@ -15,7 +15,6 @@ import java.util.Scanner;
 public class e_3_14 {
 
 	public static void main(String[] args) {
-		// TODO 自動生成されたメソッド・スタブ
 
 		//Scannerクラスをインスタンス化する
 		Scanner sc = new Scanner(System.in);
@@ -31,11 +30,11 @@ public class e_3_14 {
 		int input2 = sc.nextInt();
 
 		//読み込んだ2つの値が同じ値の場合
-		if(input1 == input2) {
+		if (input1 == input2) {
 			//判定結果を出力
 			System.out.println("二つの値は同じです。");
-		//1つ目の値が2つ目の値より小さい場合
-		} else if(input1 > input2) {
+			//1つ目の値が2つ目の値より小さい場合
+		} else if (input1 > input2) {
 			//1つ目の値を仮のdata変数に代入する
 			int data = input1;
 			//2つ目の値を1つ目の値に代入する

@@ -14,7 +14,6 @@ import java.util.Scanner;
 public class e_4_4 {
 
 	public static void main(String[] args) {
-		// TODO 自動生成されたメソッド・スタブ
 
 		//List 4-4をコピー
 		Scanner stdIn = new Scanner(System.in);

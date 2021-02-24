@@ -16,7 +16,6 @@ import java.util.Scanner;
 public class e_3_2 {
 
 	public static void main(String[] args) {
-		// TODO 自動生成されたメソッド・スタブ
 
 		//整数AのScannerクラスをインスタンス化する
 		Scanner scA = new Scanner(System.in);
@@ -37,7 +36,7 @@ public class e_3_2 {
 		int valB = scB.nextInt();
 
 		//読み込んだ整数Aの値がBで割り切れる場合
-		if(valA % valB == 0) {
+		if (valA % valB == 0) {
 			//約数であることの文言を出力させる
 			System.out.println("BはAの約数です。");
 		} else {

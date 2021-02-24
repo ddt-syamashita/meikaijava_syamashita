@@ -15,7 +15,6 @@ import java.util.Scanner;
 public class e_3_13 {
 
 	public static void main(String[] args) {
-		// TODO 自動生成されたメソッド・スタブ
 
 		//Scannerクラスをインスタンス化する
 		Scanner sc = new Scanner(System.in);
@@ -35,31 +34,30 @@ public class e_3_13 {
 		//読み込んだ3つ目の値を変数input3に代入
 		int input3 = sc.nextInt();
 
-
 		//読み込んだ3つの値の中央値を出力させる
 		//1つ目の値が2つ目の値以上の場合
-		if(input1 >= input2) {
+		if (input1 >= input2) {
 			//2つ目の値が3つ目の値以下の場合
-			if(input2 <= input3) {
+			if (input2 <= input3) {
 				//2つ目の値を出力
 				System.out.println(input2);
-			//1つ目の値が3つ目の値以下の場合
-			} else if(input1 <= input3) {
+				//1つ目の値が3つ目の値以下の場合
+			} else if (input1 <= input3) {
 				//1つ目の値を出力
 				System.out.println(input1);
-			//上記パターン以外のは3つ目の値を出力
+				//上記パターン以外のは3つ目の値を出力
 			} else {
 				System.out.println(input3);
 			}
-		//1つ目の値が2つ目の値以上ではなく、1つ目の値が3つ目の値よりも小さい場合
-		} else if(input1 > input3) {
+			//1つ目の値が2つ目の値以上ではなく、1つ目の値が3つ目の値よりも小さい場合
+		} else if (input1 > input3) {
 			//1つ目の値を出力させる
 			System.out.println(input1);
-		//2つ目の値が3つ目の値よりも小さい場合
-		} else if(input2 > input3) {
+			//2つ目の値が3つ目の値よりも小さい場合
+		} else if (input2 > input3) {
 			//3つ目の値を出力
 			System.out.println(input3);
-		//それ以外の場合は2つ目の値を出力させる
+			//それ以外の場合は2つ目の値を出力させる
 		} else {
 			System.out.println(input2);
 		}

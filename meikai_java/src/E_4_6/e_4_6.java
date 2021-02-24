@@ -14,7 +14,6 @@ import java.util.Scanner;
 public class e_4_6 {
 
 	public static void main(String[] args) {
-		// TODO 自動生成されたメソッド・スタブ
 
 		//Scannerクラスをインスタンス化する
 		Scanner stdIn = new Scanner(System.in);
@@ -29,9 +28,9 @@ public class e_4_6 {
 		int count = 0;
 
 		//読み込んだ値が1未満であるか判定
-		if(input < 1){
+		if (input < 1) {
 			//読み込んだ数分繰り返す
-			while(count < input) {
+			while (count < input) {
 				//指定文字を出力する
 				System.out.print('*');
 				//繰り返し変数を後置インクリメントする

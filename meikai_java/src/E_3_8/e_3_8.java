@@ -8,7 +8,6 @@
  * 作成日：2/2
  */
 
-
 package E_3_8;
 
 import java.util.Scanner;
@@ -16,7 +15,6 @@ import java.util.Scanner;
 public class e_3_8 {
 
 	public static void main(String[] args) {
-		// TODO 自動生成されたメソッド・スタブ
 
 		//Scannerクラスをインスタンス化する
 		Scanner sc = new Scanner(System.in);
@@ -28,19 +26,19 @@ public class e_3_8 {
 		int input = sc.nextInt();
 
 		//入力された値が0～59の場合
-		if(input >= 0 && input <=59 ) {
+		if (input >= 0 && input <= 59) {
 			//不可の文言を出力
 			System.out.println("不可");
-		//入力された値が60～69の場合
-		} else if(input >= 60 && input <= 69) {
+			//入力された値が60～69の場合
+		} else if (input >= 60 && input <= 69) {
 			//可の文言を出力
 			System.out.println("可");
-		//入力された値が70～79の場合
-		} else if(input >= 70 && input <= 79) {
+			//入力された値が70～79の場合
+		} else if (input >= 70 && input <= 79) {
 			//良の文言を出力
 			System.out.println("良");
-		//入力された値が80～100の場合
-		} else if(input >= 80 && input <= 100) {
+			//入力された値が80～100の場合
+		} else if (input >= 80 && input <= 100) {
 			//優の文言を出力
 			System.out.println("優");
 		}

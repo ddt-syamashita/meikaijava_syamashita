@@ -14,7 +14,6 @@ import java.util.Scanner;
 public class e_2_5 {
 
 	public static void main(String[] args) {
-		// TODO 自動生成されたメソッド・スタブ
 
 		//Scanner クラスをインスタンス化する
 		Scanner sc = new Scanner(System.in);
@@ -35,9 +34,7 @@ public class e_2_5 {
 		System.out.println("合計は" + (x + y) + "です。");
 
 		//xとyの読み込んだ値の平均を出力させる
-		System.out.println("平均は" + ((x + y) /2) + "です。");
-
-
+		System.out.println("平均は" + ((x + y) / 2) + "です。");
 
 	}
 

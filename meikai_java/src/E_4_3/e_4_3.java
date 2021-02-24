@@ -15,7 +15,6 @@ import java.util.Scanner;
 public class e_4_3 {
 
 	public static void main(String[] args) {
-		// TODO 自動生成されたメソッド・スタブ
 
 		//Scannerクラスをインスタンス化する
 		Scanner sc = new Scanner(System.in);
@@ -34,7 +33,7 @@ public class e_4_3 {
 		int data;
 
 		//2つ目の値が1つ目の値より小さい場合、出力結果を昇順に表示する
-		if(input2 < input1) {
+		if (input2 < input1) {
 			//1つ目の値を一時的に別変数に格納する
 			data = input1;
 			//2つ目の値を1つ目の値に代入する
@@ -49,9 +48,9 @@ public class e_4_3 {
 			System.out.print(input1 + " ");
 
 			//1つ目の値を出力後、インクリメントする
-			input1 ++;
-		//1つ目の値が2つ目の値まで繰り返させる
-		} while(input1 <= input2);
+			input1++;
+			//1つ目の値が2つ目の値まで繰り返させる
+		} while (input1 <= input2);
 	}
 
 }

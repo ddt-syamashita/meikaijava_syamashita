@@ -15,7 +15,6 @@ import java.util.Scanner;
 public class e_3_11 {
 
 	public static void main(String[] args) {
-		// TODO 自動生成されたメソッド・スタブ
 
 		//Scannerクラスをインスタンス化する
 		Scanner sc = new Scanner(System.in);
@@ -34,7 +33,7 @@ public class e_3_11 {
 		int data;
 
 		//1つ目の値よりも2つ目の値が大きい場合
-		if(input1 < input2) {
+		if (input1 < input2) {
 			//2つ目の値 -1つ目の値で差を計算し、結果を変数dataに代入する
 			data = input2 - input1;
 		} else {
@@ -43,11 +42,11 @@ public class e_3_11 {
 		}
 
 		//読み込んだ値の差が10以下の場合
-		if(data <= 10) {
+		if (data <= 10) {
 			//判定結果を出力する
 			System.out.println("それらの差は10以下です。");
-		//読み込んだ値の差が11以上の場合
-		} else if(data >= 11) {
+			//10以下の値以外の場合→差が11以上の場合
+		} else {
 			//判定結果を出力する
 			System.out.println("それらの差は11以上です。");
 		}

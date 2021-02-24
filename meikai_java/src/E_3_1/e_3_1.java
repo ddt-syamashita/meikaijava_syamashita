@@ -7,7 +7,6 @@
  * 作成日：2/1
  */
 
-
 package E_3_1;
 
 import java.util.Scanner;
@@ -15,7 +14,6 @@ import java.util.Scanner;
 public class e_3_1 {
 
 	public static void main(String[] args) {
-		// TODO 自動生成されたメソッド・スタブ
 
 		//整数値の入力を促す文言を出力
 		System.out.print("整数値：");
@@ -27,12 +25,12 @@ public class e_3_1 {
 		int input = sc.nextInt();
 
 		//読み込まれた値が、0未満の場合
-		if(input < 0) {
+		if (input < 0) {
 			//読み込んだ値に絶対値を表示する
-			System.out.println("その絶対値は" + (input * -1) + "です。");
-		} else {
-			//値が負ではない場合、読み込んだ値を出力させる
-			System.out.println(input);
+			input = -input;
+
+			//読み込んだ値を出力させるため、計算したinput変数を定義する
+			System.out.println("その絶対値は" + input + "です。");
 		}
 	}
 }

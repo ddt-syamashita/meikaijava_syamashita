@@ -13,7 +13,6 @@ package E_1_2;
 public class e_1_2 {
 
 	public static void main(String[] args) {
-		// TODO 自動生成されたメソッド・スタブ
 
 		//自分の苗字1文字目を出力後、改行させる
 		System.out.println("山");

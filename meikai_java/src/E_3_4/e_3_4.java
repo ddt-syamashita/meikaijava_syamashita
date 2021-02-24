@@ -15,7 +15,6 @@ import java.util.Scanner;
 public class e_3_4 {
 
 	public static void main(String[] args) {
-		// TODO 自動生成されたメソッド・スタブ
 
 		//Scannerクラスをインスタンス化する
 		Scanner sc1 = new Scanner(System.in);
@@ -32,11 +31,11 @@ public class e_3_4 {
 		int b = sc2.nextInt();
 
 		//変数bより変換aの方が大きい場合
-		if(b < a) {
+		if (b < a) {
 			System.out.println("a のほうが大きいです。");
-		} else if(a < b) {
+		} else if (a < b) {
 			System.out.println("b のほうが大きいです。");
-		} else if(a == b) {
+		} else if (a == b) {
 			System.out.println("a と b は同じ値です。");
 		}
 	}

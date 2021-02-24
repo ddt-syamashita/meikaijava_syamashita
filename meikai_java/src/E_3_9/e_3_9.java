@@ -14,7 +14,6 @@ import java.util.Scanner;
 public class e_3_9 {
 
 	public static void main(String[] args) {
-		// TODO 自動生成されたメソッド・スタブ
 
 		//Scannerクラスをインスタンス化する
 		Scanner sc = new Scanner(System.in);
@@ -32,10 +31,10 @@ public class e_3_9 {
 		int input2 = sc.nextInt();
 
 		//1つ目の値が大きい場合
-		if(input1 > input2) {
+		if (input1 > input2) {
 			//判定結果の文言を出力
 			System.out.println(input1);
-		} else if(input1 < input2) {
+		} else if (input1 < input2) {
 			//判定結果の文言を出力
 			System.out.println(input2);
 		}

@@ -14,7 +14,6 @@ import java.util.Scanner;
 public class e_2_4 {
 
 	public static void main(String[] args) {
-		// TODO 自動生成されたメソッド・スタブ
 
 		//改行なしで、指定文字列をコンソールに出力
 		System.out.print("整数値：");

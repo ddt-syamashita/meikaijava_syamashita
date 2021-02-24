@@ -17,7 +17,6 @@ import java.util.Random;
 public class e_2_9 {
 
 	public static void main(String[] args) {
-		// TODO 自動生成されたメソッド・スタブ
 
 		//Random をインスタンス化する
 		Random randOne = new Random();
@@ -38,7 +37,7 @@ public class e_2_9 {
 		//10未満の実数値を算出するため、乱数を10倍ささる
 		System.out.println("0.0以上10.0未満：" + (lucky2 * 10));
 		//1.0未満の数値を算出させるために、乱数を2倍する。その後、-1することにより、値を-1.0以上1.0未満の範囲で出力させる
-		System.out.println("-1.0以上1.0未満：" + ((lucky3 * 2)  -1));
+		System.out.println("-1.0以上1.0未満：" + ((lucky3 * 2) - 1));
 
 	}
 
