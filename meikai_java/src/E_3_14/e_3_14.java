@@ -20,12 +20,12 @@ public class e_3_14 {
 		Scanner sc = new Scanner(System.in);
 
 		//1つ目の値の入力を促す文言を出力
-		System.out.print("整数A：");
+		System.out.print("整数input1：");
 		//読み込んだ1つ目の値を変数に代入
 		int input1 = sc.nextInt();
 
 		//2つ目の値の入力を促す文言を出力
-		System.out.print("整数B：");
+		System.out.print("整数input2：");
 		//読み込んだ2つ目の値を変数に代入
 		int input2 = sc.nextInt();
 
@@ -47,6 +47,13 @@ public class e_3_14 {
 			System.out.println("変数input1は" + input1 + "です。");
 			//計算結果を出力
 			System.out.println("変数input2は" + input2 + "です。");
+		//それ以外(input1 < input2)の場合
+		} else {
+			//計算結果を出力
+			System.out.println("変数input1は" + input1 + "です。");
+			//計算結果を出力
+			System.out.println("変数input2は" + input2 + "です。");
 		}
+
 	}
 }

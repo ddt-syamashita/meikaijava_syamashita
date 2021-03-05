@@ -18,20 +18,24 @@ public class e_4_8 {
 		//Scannerクラスをインスタンス化する
 		Scanner stdIn = new Scanner(System.in);
 
+		int input;
+
+		do {
 		//数値入力を促す文言を出力
 		System.out.print("整数値：");
 
 		//読み込んだ値を変数に代入する
-		int input = stdIn.nextInt();
+		input = stdIn.nextInt();
+		}while (input <= 0);
 
 		//繰り返し回数用の変数を定義する
-		int count = 1;
+		int count = 0;
 
 		//読み込んだ値
-		while (count < input) {
+		do {
 			input /= 10;
 			count++;
-		}
+		}while (0 < input);
 		System.out.println("その値は" + count + "桁です。");
 	}
 }

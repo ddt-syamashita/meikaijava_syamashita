@@ -30,13 +30,18 @@ public class e_3_4 {
 		System.out.print("整数B：");
 		int b = sc2.nextInt();
 
-		//変数bより変換aの方が大きい場合
-		if (b < a) {
-			System.out.println("a のほうが大きいです。");
-		} else if (a < b) {
-			System.out.println("b のほうが大きいです。");
-		} else if (a == b) {
+		//変数aとbの値が一致している場合
+		if (a == b) {
+			//同じ値である文言を出力させる
 			System.out.println("a と b は同じ値です。");
+		//bより変換aの方が大きい場合
+		}else if (b < a) {
+			//aの値が大きい文言を出力させる
+			System.out.println("a のほうが大きいです。");
+		//それ以外の場合は、bの値が大きいものとして分岐させる
+		} else {
+			//bの値が大きい文言を出力させる
+			System.out.println("b のほうが大きいです。");
 		}
 	}
 

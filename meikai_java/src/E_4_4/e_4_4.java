@@ -20,17 +20,24 @@ public class e_4_4 {
 
 		System.out.println("カウントダウンします。");
 
-		int x;
+		int input;
 
 		do {
+			//入力を促す文言を出力させる
 			System.out.print("正の整数値：");
-			x = stdIn.nextInt();
-		} while (x <= 0);
+			//値を出力させるため、入力値を変数に代入させる
+			input = stdIn.nextInt();
+		} while (input <= 0);
 
-		//while文終了時にxの値が-1になるまで繰り返す
-		while (x >= -1) {
-			System.out.println(x);
-			x--;
+		//0以上の値の場合、繰り返させる処理
+		while (input >= 0) {
+			//繰り返す度にマイナス1された入力値を出力させる
+			System.out.println(input);
+			//繰り返す度にマイナス1させる
+			input--;
 		}
+
+		//xの値を出力させる
+		System.out.println("x = " + input);
 	}
 }

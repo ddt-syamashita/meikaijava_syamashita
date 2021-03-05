@@ -26,23 +26,26 @@ public class e_3_7 {
 		//読み込んだ値をint型変数に代入する
 		int input = sc.nextInt();
 
+		//読み込まれた値が3で割り切れる場合
+		if (input > 0) {
+			if (input % 3 == 0) {
+				//3で割り切れることを出力
+				System.out.println("その値は3で割り切れます。");
+				//3で割り1余る場合
+			} else if (input % 3 == 1) {
+				//分岐結果を出力
+				System.out.println("その値を3で割った余りは1です。");
+				//3で割り2余る場合
+			} else {
+				//分岐結果を出力
+				System.out.println("その値を3で割った余りは2です。");
+			}
 		//読み込まれた値が正でない場合
-		if (input < 0) {
+		} else {
 			//正でない場合の文言を出力
 			System.out.println("正でない値が入力されました。");
-			//読み込まれた値が3で割り切れる場合
-		} else if (input % 3 == 0) {
-			//3で割り切れることを出力
-			System.out.println("その値は3で割り切れます。");
-			//3で割り1余る場合
-		} else if (input % 3 == 1) {
-			//分岐結果を出力
-			System.out.println("その値を3で割った余りは1です。");
-			//3で割り2余る場合
-		} else if (input % 3 == 2) {
-			//分岐結果を出力
-			System.out.println("その値を3で割った余りは2です。");
 		}
+
 	}
 
 }

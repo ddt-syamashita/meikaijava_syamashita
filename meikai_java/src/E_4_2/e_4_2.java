@@ -26,7 +26,7 @@ public class e_4_2 {
 		System.out.println("数当てゲーム開始！");
 
 		//乱数を代入する変数を定義し、10～99の乱数を生成する
-		int randomNum = rand.nextInt(89) + 10;
+		int randomNum = rand.nextInt(90) + 10;
 		;
 
 		//読み込んだ値を代入する変数を定義
@@ -51,7 +51,7 @@ public class e_4_2 {
 				//分岐結果を出力
 				System.out.println("もっと小さな数だよ。");
 				//乱数よりも入力値が小さい場合
-			} else if (randomNum > input) {
+			} else {
 				//分岐結果を出力
 				System.out.println("もっと大きな数だよ。");
 			}

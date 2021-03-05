@@ -29,18 +29,22 @@ public class e_3_8 {
 		if (input >= 0 && input <= 59) {
 			//不可の文言を出力
 			System.out.println("不可");
-			//入力された値が60～69の場合
+		//入力された値が60～69の場合
 		} else if (input >= 60 && input <= 69) {
 			//可の文言を出力
 			System.out.println("可");
-			//入力された値が70～79の場合
+		//入力された値が70～79の場合
 		} else if (input >= 70 && input <= 79) {
 			//良の文言を出力
 			System.out.println("良");
-			//入力された値が80～100の場合
+		//入力された値が80～100の場合
 		} else if (input >= 80 && input <= 100) {
 			//優の文言を出力
 			System.out.println("優");
+		//点数範囲以外の値が入力された場合
+		} else {
+			//注意文言を出力させる
+			System.out.println("0～100の数値を入力してください");
 		}
 	}
 

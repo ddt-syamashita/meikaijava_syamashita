@@ -16,7 +16,6 @@ import java.util.Scanner;
 public class e_3_6 {
 
 	public static void main(String[] args) {
-		// TODO 自動生成されたメソッド・スタブ
 
 		//Scannerクラスをインスタンス化する
 		Scanner sc = new Scanner(System.in);
@@ -28,10 +27,10 @@ public class e_3_6 {
 		int input = sc.nextInt();
 
 		//入力値が10の倍数の場合
-		if(input < 0) {
+		if (input < 0) {
 			//10の倍数であることを出力
 			System.out.println("正でない値が入力されました。");
-		} else if(input % 10 == 0) {
+		} else if (input % 10 == 0) {
 			//正の値でないことを出力
 			System.out.println("その値は10の倍数です。");
 		} else {

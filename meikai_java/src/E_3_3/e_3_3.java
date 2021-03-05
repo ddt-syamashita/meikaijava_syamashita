@@ -21,13 +21,14 @@ public class e_3_3 {
 		System.out.print("整数値：");
 		int n = stdIn.nextInt();
 
-		if (n > 0)
+		if (n > 0) {
 			System.out.println("その値は正です。");
-		else if (n < 0)
+		} else if (n < 0) {
 			System.out.println("その値は負です。");
-		//elseから変更箇所を記述
-		else if (n == 0)
+			//elseから変更箇所を記述
+		} else if (n == 0) {
 			System.out.println("その値は０です。");
+		}
 
 		//検証結果→else文と同様に、出力される
 	}

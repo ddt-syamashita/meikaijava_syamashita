@@ -22,15 +22,26 @@ public class e_4_5 {
 		System.out.println("カウントダウンします。");
 
 		int x;
+		int input;
 		do {
-			System.out.print("正の整数値：");
+			System.out.print("正の整数値(問題文用 x--)：");
 			x = stdIn.nextInt();
-		} while (x <= 0);
+			System.out.print("正の整数値(比較用 --x）：");
+			input = stdIn.nextInt();
+		} while (input <= 0);
 
-		//while文終了時にxの値が-1になるまで繰り返す
+		System.out.println("x--の場合：");
+		//入力値変数が0以上になるまで繰り返させるため、while文を定義
 		while (x >= 0) {
+			//問題文出力結果を確認
+			System.out.println(x--);
+		}
+
+		System.out.println("--xの場合：");
+		//入力値変数が0以上になるまで繰り返させるため、while文を定義
+		while (input >= 0) {
 			//「x--」を「--x」に修正。出力結果を確認
-			System.out.println(--x);
+			System.out.println(--input);
 		}
 	}
 }
