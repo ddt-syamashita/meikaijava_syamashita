@@ -29,30 +29,32 @@ public class e_3_14 {
 		//読み込んだ2つ目の値を変数に代入
 		int input2 = sc.nextInt();
 
+		//小さいほうの値と大きいほうの値を保持させるためint型変数を定義する
+		int min, max;
+
 		//読み込んだ2つの値が同じ値の場合
 		if (input1 == input2) {
 			//判定結果を出力
 			System.out.println("二つの値は同じです。");
-			//1つ目の値が2つ目の値より小さい場合
-		} else if (input1 > input2) {
-			//1つ目の値を仮のdata変数に代入する
-			int data = input1;
-			//2つ目の値を1つ目の値に代入する
-			input1 = input2;
-			//仮変数に格納していた1つ目の変数を2つ目の変数に代入する
-			input2 = data;
-			//コメントを出力
-			System.out.println("a≦bとなるようにソートしました。");
-			//計算結果を出力
-			System.out.println("変数input1は" + input1 + "です。");
-			//計算結果を出力
-			System.out.println("変数input2は" + input2 + "です。");
-		//それ以外(input1 < input2)の場合
+		//読み込んだ2つの値が同じ値ではない場合
 		} else {
-			//計算結果を出力
-			System.out.println("変数input1は" + input1 + "です。");
-			//計算結果を出力
-			System.out.println("変数input2は" + input2 + "です。");
+			//1つ目の値が2つ目の値より大きい場合
+			if (input1 > input2) {
+				//1つ目に入力した値を最大値変数に代入する
+				max = input1;
+				//2つ目に入力した値を最小値変数に代入する
+				min = input2;
+			//それ以外の場合
+			} else {
+				//1つ目に入力した値を最小値変数に代入させる
+				min = input1;
+				//2つ目に入力した値を最大値変数に代入させる
+				max = input2;
+			}
+			//入力値が小さい値を出力
+			System.out.println("小さいほうの値は" + min + "です。");
+			//入力値が大きい値をを出力
+			System.out.println("大きいほうの値は" + max + "です。");
 		}
 
 	}
