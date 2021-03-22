@@ -41,11 +41,6 @@ public class e_4_2 {
 			//読み込んだ値をint型変数に代入する
 			input = sc.nextInt();
 
-			//乱数と入力値が同じ場合
-			if (randomNum == input) {
-				System.out.println("正解です。");
-			}
-
 			//乱数より入力値が大きい場合
 			if (randomNum < input) {
 				//分岐結果を出力
@@ -58,5 +53,8 @@ public class e_4_2 {
 
 			//乱数と入力値が異なっている場合、do文を繰り返す。
 		} while (randomNum != input);
+
+		//乱数と読み込んだ入力値が一致している場合正解の文言を出力させる
+		System.out.println("正解です。");
 	}
 }
