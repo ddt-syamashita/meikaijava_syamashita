@@ -7,11 +7,11 @@
  * 作成日：2021/03/17
  */
 
-package E_7_1;
+package E_7_01;
 
 import java.util.Scanner;
 
-public class E_7_1 {
+public class E_7_01 {
 
 	//int型引数を持つsingOfメソッドを定義する
 	static int signOf(int n) {
