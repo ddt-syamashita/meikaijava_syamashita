@@ -27,7 +27,6 @@ public class e_4_2 {
 
 		//乱数を代入する変数を定義し、10～99の乱数を生成する
 		int randomNum = rand.nextInt(90) + 10;
-		;
 
 		//読み込んだ値を代入する変数を定義
 		int input;
