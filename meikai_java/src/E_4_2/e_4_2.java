@@ -46,7 +46,7 @@ public class e_4_2 {
 				//分岐結果を出力
 				System.out.println("もっと小さな数だよ。");
 				//乱数よりも入力値が小さい場合
-			} else {
+			} else if(randomNum > input){
 				//分岐結果を出力
 				System.out.println("もっと大きな数だよ。");
 			}

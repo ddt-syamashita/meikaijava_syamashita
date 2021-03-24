@@ -20,12 +20,12 @@ public class e_4_3 {
 		Scanner sc = new Scanner(System.in);
 
 		//1つ目の値の入力を促す文言を出力
-		System.out.print("整数A；");
+		System.out.print("整数A：");
 		//1つ目の読み込んだ値を変数に代入する
 		int input1 = sc.nextInt();
 
 		//2つ目の値の入力を促す文言を出力
-		System.out.print("整数B；");
+		System.out.print("整数B：");
 		//2つ目の読み込んだ値を変数に代入する
 		int input2 = sc.nextInt();
 
