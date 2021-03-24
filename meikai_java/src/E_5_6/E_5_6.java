@@ -14,16 +14,25 @@ public class E_5_6 {
 	public static void main(String[] args) {
 
 		//floatとintを並べて表示させる
-		System.out.println("   float       int   ");
+		System.out.println("   float         int   ");
 		//区切るため-を出力させる
-		System.out.println("-------------------------");
+		System.out.println("------------------------");
 
-		//float型の変数ｘを0.0から1.0までループさせる。int型として表示させるため、float型yを定義する
-		for (float x = 0.0F, intValue1 = 0.0F; x <= 1.0F; x += 0.001F, intValue1++) {
+		float countFloat = 0.0F;
+
+		//int型変数を0から1000まで繰り返す処理を行うため、for文を定義する
+		for (int i = 0; i <= 1000; i++) {
 			//0から1000までインクリメントした値を算出させる
-			float intValue2 = (float) intValue1 / 1000;
-			//増加させる変数を桁数を揃えるため、printfを定義し出力させる。出力後、\nで改行表示させる。
-			System.out.printf("%.7f     %.7f\n", x, intValue2);
+			System.out.printf(" %1.7f    ", countFloat);
+
+			//float型の変数を0.001ずつ繰り返すたびに加算させる
+			countFloat += 0.001F;
+
+			//繰り返し変数のiをfloat型に型変換し1000で割った値をfloat型変数に代入させる
+			float countInt = (float) i / 1000;
+
+			//int型の繰り返し変数を出力させる
+			System.out.printf("%1.7f%n", countInt);
 		}
 
 	}

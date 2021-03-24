@@ -23,7 +23,7 @@ public class E_5_7 {
 		//求める値としてfloat型変数resultValueを定義する。0.0から1.0まで0.001おきにインクリメントさせるループ処理を定義する
 		for (float resultValue = 0.0F; resultValue <= 1.0F; resultValue += 0.001F) {
 			//resultValueの値と、resultValueの値を2乗として算出した値をコンソールに出力させるため、System.outを定義する
-			System.out.printf("%.7f       %.7f\n", resultValue, (resultValue * resultValue));
+			System.out.printf("%.7f       %.7f%n", resultValue, (resultValue * resultValue));
 		}
 	}
 }
