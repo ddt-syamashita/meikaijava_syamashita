@@ -13,10 +13,9 @@ public class E_7_05 {
 
 	/**
 	 *  指定された「こんにちは。」文言を出力させる
-	 *  引数なし。
 	 */
 	static void hello() {
-		System.out.println("『こんにちは。』");
+		System.out.println("こんにちは。");
 	}
 
 	public static void main(String[] args) {

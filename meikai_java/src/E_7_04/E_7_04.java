@@ -17,6 +17,7 @@ public class E_7_04 {
 	/**
 	 *  引数の値までの全整数の和を求める
 	 *  @param n：入力値を取得する
+	 *  @return ：引数の和を返却する
 	 */
 	static int sumUp(int n) {
 

@@ -13,7 +13,11 @@ import java.util.Scanner;
 
 public class E_7_01 {
 
-	//int型引数を持つsingOfメソッドを定義する
+	/**
+	 * int型引数の値によって特定の値を返すメソッド
+	 * @param n:int型の値を取得する
+	 * @return :値が負であれば-1、0であれば0、正であれば1を返却
+	 */
 	static int signOf(int n) {
 
 		//引数の値が0の場合

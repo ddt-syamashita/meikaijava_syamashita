@@ -19,6 +19,7 @@ public class E_7_03 {
 	 *  @param a：1つ目のint型変数を取得する
 	 *  @param b：2つ目のint型変数を取得する
 	 *  @param c：3つ目のint型変数を取得する
+	 *  @return ：取得した3つの引数の中央値を返却する
 	 */
 	static int med(int a, int b, int c) {
 

@@ -19,6 +19,7 @@ public class E_7_02 {
 	 *  @param a：1つ目のint型変数を取得する
 	 *  @param b：2つ目のint型変数を取得する
 	 *  @param c：3つ目のint型変数を取得する
+	 *  @return ：取得した3つの最小値を返す
 	 */
 	static int min(int a, int b, int c) {
 
