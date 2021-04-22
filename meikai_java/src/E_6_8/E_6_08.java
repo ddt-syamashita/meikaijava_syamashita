@@ -18,11 +18,16 @@ public class E_6_08 {
 		//Scannerクラスをインスタンス化する
 		Scanner standardInput = new Scanner(System.in);
 
-		//要素数の入力を促す文言を出力させる
-		System.out.print("要素数：");
-
 		//入力値を要素数として読み込むため、double型変数を定義する
-		double element = standardInput.nextDouble();
+		double element = 0;
+
+		//1以上の値が入力されるまで繰り返させるため、do文で入力処理を行う
+		do {
+			//要素数の入力を促す文言を出力させる
+			System.out.print("要素数：");
+			element = standardInput.nextDouble();
+		}while(element <= 0);
+
 
 		//double型の配列を生成する。配列の要素数は、整数のint型に型変換する。
 		double[] doubleArray = new double[(int) element];
@@ -39,7 +44,7 @@ public class E_6_08 {
 		//合計値を求めるdouble型変数を定義する
 		double sum = 0;
 
-		//合計値を求めるため、全要素
+		//合計値を求めるため、各要素の値をsum変数に加算させる
 		for (double i : doubleArray) {
 			sum += i;
 		}

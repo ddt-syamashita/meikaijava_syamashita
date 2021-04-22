@@ -25,9 +25,6 @@ public class E_6_14 {
 		//Scannerクラスをインスタンス化する
 		Scanner standardInput = new Scanner(System.in);
 
-		//Scannerクラスをインスタンス化する（繰り返し終了判別用Scanner）
-		Scanner standardInput2 = new Scanner(System.in);
-
 		//String型配列で各月を要素として定義する
 		String[] monthString = {
 				"January", "February", "March", "April", "May", "Jun", "July",
@@ -38,11 +35,10 @@ public class E_6_14 {
 		//月の1～12の乱数をint型変数として定義する
 		int monthRandom;
 		//同一の月が出題されないよう、仮の乱数を代入する変数を定義する
-		int temporaryRandom = 0;
+		int temporaryRandom = -1;
 
 		//入力者が何度でも繰り返し入力か、終了できるようにするためdo文で繰り返し処理を行う
 		do {
-
 			//同一の月が連続して出題されないようにさせるため、前回出題した値が同一であれば再度乱数を生成し、出題し直す
 			do {
 				//月の0～11の乱数を生成する。
@@ -56,28 +52,24 @@ public class E_6_14 {
 			System.out.print("英語表現：");
 
 			//解答をString型の読み込みさせる
-			String input = standardInput.nextLine();
+			String input = standardInput.next();
 
 			//読み込んだ文字列と、出題されたmonthStringの文字列が同一である場合
 			if (input.equals(monthString[monthRandom])) {
-
 				//正解の文言を出力させる
 				System.out.println("正解です！！");
-				//再度解答するかの質問と、入力を促す文言を出力させる
-				System.out.print("回答を続けますか？ Yes…1 / No…0： ");
-				endFlg = standardInput2.nextInt();
-
 			} else {
 				System.out.println("不正解です。");
-				System.out.print("回答を続けますか？ Yes…1 / No…0： ");
-				endFlg = standardInput2.nextInt();
-
 			}
+
+			//再度解答するかの質問と、入力を促す文言を出力させる
+			System.out.print("回答を続けますか？ Yes…1 / No…0： ");
+			endFlg = standardInput.nextInt();
 
 			//同一の乱数を出題しないように比較させるため、仮乱数を出題された乱数に格納する
 			temporaryRandom = monthRandom;
-		//0の値が入力されない限り、繰り返し処理を行う
-		} while (endFlg != 0);
+			//0の値が入力されない限り、繰り返し処理を行う
+		} while (endFlg == 1);
 
 		//解答を終了した文言を出力させる
 		System.out.println("解答を終了します。");

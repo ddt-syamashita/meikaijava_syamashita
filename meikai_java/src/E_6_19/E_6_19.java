@@ -19,11 +19,18 @@ public class E_6_19 {
 		//Scannerクラスをインスタンス化する
 		Scanner standardInput = new Scanner(System.in);
 
-		//クラス数の入力を促す文言を出力させる
-		System.out.print("クラス数：");
+		//クラス数を求めるため、int型変数を定義する
+		int classNumber = 0;
 
-		//入力値をクラス数として定義するため、int型変数に代入する
-		int classNumber = standardInput.nextInt();
+		//1以上の値が入力されるまで繰り返させるため、do文で入力処理を行う
+		do {
+			//クラス数の入力を促す文言を出力させる
+			System.out.print("クラス数：");
+
+			//入力値をクラス数として定義するため、int型変数に代入する
+			classNumber = standardInput.nextInt();
+
+		}while(classNumber <= 0);
 
 		//クラス数の配列を生成し、第一配列に入力したクラス数を定義
 		int[][] classArray = new int[classNumber][];
@@ -34,23 +41,39 @@ public class E_6_19 {
 		//合計、平均値を求めるため、学生の人数を保持するための変数を定義する
 		int studentCount = 0;
 
+		//学生の数を求めるため、int型変数を定義する
+		int studentNumber = 0;
+
 		//クラス数分繰り返す処理を行うため、for文を定義する
 		for (int i = 0; i < classArray.length; i++) {
-			//クラスに対しての人数の入力を促す文言を出力させる
-			System.out.print((i + 1) + "組の人数：");
-			//入力値をint型変数に代入させる
-			int studentNumber = standardInput.nextInt();
+
+			//1以上の値が入力されるまで繰り返させるため、do文で入力処理を行う
+			do {
+				//クラスに対しての人数の入力を促す文言を出力させる
+				System.out.print((i + 1) + "組の人数：");
+				//入力値をint型変数に代入させる
+				studentNumber = standardInput.nextInt();
+			}while(studentNumber <= 0);
+
 			//合計、平均値を求めるための変数に入力値を代入させる
 			studentCount += studentNumber;
 
 			//入力値を第二配列の要素数とさせるため、生成させる際に定義する
 			classArray[i] = new int[studentNumber];
+
+			//入力値を点数として扱うため、変数に代入させる
+			int inputScore = 0;
 			//人数として入力値分繰り返す処理のfor文を定義する
 			for (int j = 0; j < classArray[i].length; j++) {
-				//各要素のクラスの何番目の入力を促す文言を出力させる
-				System.out.print((i + 1) + "組" + (j + 1) + "番の点数：");
-				//各クラスの生徒に対して、入力値をclassArray配列の各要素に代入させる
-				classArray[i][j] = standardInput.nextInt();
+				//0～100の値が入力されるまで繰り返す処理を行う
+				do {
+					//各要素のクラスの何番目の入力を促す文言を出力させる
+					System.out.print((i + 1) + "組" + (j + 1) + "番の点数：");
+
+					//各クラスの生徒に対して、入力値をclassArray配列の各要素に代入させる
+					inputScore = standardInput.nextInt();
+					classArray[i][j] = inputScore;
+				}while(inputScore > 100 || inputScore < 0);
 			}
 
 		}
@@ -69,11 +92,11 @@ public class E_6_19 {
 			for (int j = 0; j < classArray[i].length; j++) {
 				//合計配列に各要素の入力結果の合計結果を代入させる
 				totalArray[i] += classArray[i][j];
-				//平均配列に各要素の入力結果の合計結果を代入させる
-				averageArray[i] += totalArray[i] / (double) classArray[i].length;
 			}
+			//平均配列に各要素の入力結果の合計結果を代入させる
+			averageArray[i] += totalArray[i] / (double) classArray[i].length;
 			//printfを定義し、組と、合計、平均値を出力させる
-			System.out.printf("%2d組 | %6d %5.1f  \n", i + 1, totalArray[i], averageArray[i]);
+			System.out.printf("%2d組 | %6d  %5.1f  \n", i + 1, totalArray[i], averageArray[i]);
 		}
 
 		//合計の変数を定義する

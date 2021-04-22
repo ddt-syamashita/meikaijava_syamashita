@@ -24,9 +24,6 @@ public class E_6_15 {
 		//Scannerクラスをインスタンス化する
 		Scanner standardInput = new Scanner(System.in);
 
-		//Scannerクラスをインスタンス化する（繰り返し終了判別用Scanner）
-		Scanner standardInput2 = new Scanner(System.in);
-
 		//解答する曜日名を表示させるため、String型の変数を定義する
 		String[] weekName = { "月", "火", "水", "木", "金", "土", "日" };
 
@@ -38,7 +35,7 @@ public class E_6_15 {
 		//曜日の0～6の乱数をint型変数として定義する
 		int weekRandom;
 		//同一の月が出題されないよう、仮の乱数を代入する変数を定義する
-		int temporaryRandom = 0;
+		int temporaryRandom = -1;
 
 		//入力を促す文言を出力させる
 		System.out.println("英語の曜日名を小文字で入力してください");
@@ -56,26 +53,22 @@ public class E_6_15 {
 			System.out.print(weekName[weekRandom] + "曜日：");
 
 			//解答をString型の読み込みさせる
-			String input = standardInput.nextLine();
+			String input = standardInput.next();
 
 			//読み込んだ文字列と、出題されたmonthStringの文字列が同一である場合
 			if (input.equals(weekString[weekRandom])) {
-
 				//正解の文言を出力させる
 				System.out.println("正解です！！");
-				//再度解答するかの質問と、入力を促す文言を出力させる
-				System.out.print("回答を続けますか？ Yes…1 / No…0： ");
-				endFlg = standardInput2.nextInt();
 			} else {
 				System.out.println("不正解です。");
-				System.out.print("回答を続けますか？ Yes…1 / No…0： ");
-				endFlg = standardInput2.nextInt();
-
 			}
+			System.out.print("回答を続けますか？ Yes…1 / No…0： ");
+			endFlg = standardInput.nextInt();
+
 			//同一の乱数を出題しないように比較させるため、仮乱数を出題された乱数に格納する
 			temporaryRandom = weekRandom;
 			//0の値が入力されない限り、繰り返し処理を行う
-		} while (endFlg != 0);
+		} while (endFlg == 1);
 
 		//解答を終了した文言を出力させる
 		System.out.println("解答を終了します。");
