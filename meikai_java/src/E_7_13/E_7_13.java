@@ -4,12 +4,11 @@
  * 0にした値を返すメソッドreset、反転した値を返すメソッドinverseNを作成せよ。
  *    int set(    int x. int pos)
  *    int reset(  int x, int pos)
- *    int inverseN(int x, int pos)
+ *    int inverse(int x, int pos)
  *
  * 作成者：山下
  * 作成日：2021/04/26
  */
-
 
 package E_7_13;
 
@@ -22,11 +21,10 @@ public class E_7_13 {
 	 * @param x：ビットを出力させるため、整数値を取得する
 	 */
 	static void printBits(int x) {
-		for(int i = 31; i >= 0; i--) {
+		for (int i = 31; i >= 0; i--) {
 			System.out.print(((x >>> i & 1) == 1) ? '1' : '0');
 		}
 	}
-
 
 	/**
 	 * 第二引数posの指定したビット目を1にした値を返すメソッド
@@ -39,7 +37,6 @@ public class E_7_13 {
 		//引数xに対し、引数posビット目を1にした値を返すため、return文を定義する
 		return x | (1 << pos);
 	}
-
 
 	/**
 	 * 第二引数posの指定したビット目を0にした値を返すメソッド
@@ -59,13 +56,11 @@ public class E_7_13 {
 	 * @param pos：ビット目を取得する
 	 * @return：反転させたビット目を返却する
 	 */
-	static int inveresN(int x, int pos) {
+	static int inverse(int x, int pos) {
 
 		//引数xに対し、引数posビット目を反転させるため排他的論理和を扱い、return文を定義する
 		return x ^ (1 << pos);
 	}
-
-
 
 	public static void main(String[] args) {
 
@@ -93,7 +88,7 @@ public class E_7_13 {
 		printBits(reset(inputX, inputPos));
 
 		//入力された値に対し、inversesNメソッドの結果を出力させる
-		System.out.print("\ninveresN(inputX, inputPos) = ");
+		System.out.print("\ninverse(inputX, inputPos) = ");
 		printBits(reset(inputX, inputPos));
 	}
 
