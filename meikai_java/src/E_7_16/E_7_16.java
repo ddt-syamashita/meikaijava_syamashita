@@ -54,7 +54,7 @@ public class E_7_16 {
 
 		} while (inputElement <= 0);
 
-		// 配列の合計を出力させるため、配列を生成する
+		// 配列の最小値を出力させるため、配列を生成する
 		int arrayMin[] = new int[inputElement];
 
 		// 配列の要素数分繰り返すため、for文を定義する
@@ -64,7 +64,7 @@ public class E_7_16 {
 			arrayMin[i] = standardInput.nextInt();
 		}
 
-		// 配列の要素合計を求めるminOfメソッドを使用し、arrayMinの合計出力させる
+		// 配列の要素最小値を求めるminOfメソッドを使用し、arrayMinの最小値を出力させる
 		System.out.print("arrayMin：" + minOf(arrayMin));
 	}
 
