@@ -20,8 +20,15 @@ public class E_7_16 {
 	 * @return：取得配列の最小値要素を返却する
 	 */
 	static int minOf(int[] a) {
-		// 最小値を求めるため、int型変数を定義し、要素の先頭値を代入させる
-		int minValue = a[0];
+
+		// 最小値を求める変数を定義する
+		int minValue = 0;
+
+		// 取得した引数の配列aが空ではない場合
+		if (a != null) {
+			// 最小値を求めるため、int型変数を定義し、要素の先頭値を代入させる
+			minValue = a[0];
+		}
 
 		// 引数aの全要素分繰り返す処理を行うため、for文を定義する
 		for (int i = 0; i < a.length; i++) {
