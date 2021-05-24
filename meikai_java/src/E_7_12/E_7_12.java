@@ -85,14 +85,14 @@ public class E_7_12 {
 		int inputX = standardInput.nextInt();
 
 		//ビット回転の整数値の入力を促すため、文言を出力させる
-		System.out.print("ビット回転させる回数：");
+		System.out.print("nビット入力：");
 		int inputNRight = standardInput.nextInt();
 
 		//入力値のビットを表示するため結果をprintBitsメソッドで出力させる
-		System.out.print("整数x              = ");
+		System.out.print("回転前の値        = ");
 		printBits(inputX);
 		//右に回転させた結果を表示させるためprintBitsメソッドで出力させる
-		System.out.print("\nビット回転させた値 = ");
+		System.out.print("\n右にビット回転させた値 = ");
 		printBits(rRotate(inputX, inputNRight));
 
 		//左に回転させるための文言を出力させる
@@ -103,15 +103,15 @@ public class E_7_12 {
 		int inputY = standardInput.nextInt();
 
 		//ビット回転の整数値の入力を促すため、文言を出力させる
-		System.out.print("ビット回転させる回数：");
+		System.out.print("nビット入力：");
 		int inputNLeft = standardInput.nextInt();
 
 		//入力値のビットを表示するため結果をprintBitsメソッドで出力させる
-		System.out.print("整数y              = ");
+		System.out.print("回転前の値        = ");
 		printBits(inputY);
 
 		//左に回転させた結果を表示させるためprintBitsメソッドで出力させる
-		System.out.print("\nビット回転させた値 = ");
+		System.out.print("\n左にビット回転させた値 = ");
 		printBits(lRotate(inputY, inputNLeft));
 
 	}
