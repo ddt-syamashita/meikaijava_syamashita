@@ -25,20 +25,20 @@ public class E_7_17 {
 	static int linearSearch(int[] a, int key) {
 
 		// 探索結果の位置を保持するため、int型変数を定義する
-		int searchReslut = 0;
+		int searchResult = 0;
 
 		// 引数aで取得した配列の要素数分繰り返すため、for文を定義する
 		for (int i = 0; i < a.length; i++) {
 			// 要素の値と取得した探索の値が一致した場合
 			if (a[i] == key) {
 				// 探索結果の変数に、繰り返し変数を代入させる
-				searchReslut = i;
+				searchResult = i;
 				// 一致した場合は、繰り返し処理を終了させるため、breakを定義する
 				break;
 			}
 		}
 		// 探索結果の値を返却するため、return文を定義する
-		return searchReslut;
+		return searchResult;
 	}
 
 	/**
