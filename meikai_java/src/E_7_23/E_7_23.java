@@ -26,19 +26,19 @@ public class E_7_23 {
 	static int[] arraySrchIdx(int[] a, int x) {
 
 		// 探索した値の数を算出するため、int型変数定義する
-		int seachCount = 0;
+		int searchCount = 0;
 
 		// 引数で取得した配列の各要素を探索するため、繰り返し処理を定義する
 		for (int i = 0; i < a.length; i++) {
-			// 探索の値と配列の要素地が同じだった場合
+			// 探索の値と配列の要素値が同じだった場合
 			if (x == a[i]) {
 				// 探索結果の変数をカウントアップさせる
-				seachCount++;
+				searchCount++;
 			}
 		}
 
 		// 探索結果として返却する配列を生成する
-		int resultSearch[] = new int[seachCount];
+		int resultSearch[] = new int[searchCount];
 
 		// 要素を順番に並べるための変数を定義する
 		int elementNumber = 0;
