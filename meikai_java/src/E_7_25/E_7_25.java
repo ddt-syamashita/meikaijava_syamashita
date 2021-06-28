@@ -26,6 +26,12 @@ public class E_7_25 {
 	 */
 	static int[] arrayRmvOfN(int[] a, int idx, int x) {
 
+		//削除位置の引数値に、削除要素の引数値を加算した値が、取得した配列要素よりも大きい場合
+		if(idx + x > a.length) {
+			//配列の要素数から、要素位置として取得した引数値をマイナスさせた値を削除する要素数として算出する
+			x = a.length - idx;
+		}
+		
 		// 結果用の配列を生成するため、削除要素の変数値を引いた値を要素数として定義する
 		int result[] = new int[a.length - x];
 
