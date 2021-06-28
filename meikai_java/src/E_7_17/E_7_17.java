@@ -100,11 +100,23 @@ public class E_7_17 {
 		System.out.print("探索する整数：");
 		int input = standardInput.nextInt();
 
-		// 探索結果を探索メソッドを使用し、文言として出力させる
-		System.out.println("【先頭探索】検索した値は、array配列要素の[" + linearSearch(array, input) + "]にあります");
+		//キーと同じ値の要素が複数個存在する場合の切り分けのため、linearSearchとlinearSearchRメソッドの結果をint型変数に代入させる
+		int topSearch = linearSearch(array, input);
+		int bottomSearch = linearSearchR(array, input);
 
-		// 探索結果を探索メソッドを使用し、文言として出力させる
-		System.out.println("【末尾探索】検索した値は、array配列要素の[" + linearSearchR(array, input) + "]にあります");
+		//探索するキーが1つしかない場合
+		if (topSearch == bottomSearch) {
+			//検索結果を出力させる
+			System.out.println("検索した値は、array配列要素の[" + topSearch + "]にあります");
+		//探索するキーが複数個存在する場合
+		} else {
+			// 探索結果を探索メソッドを使用し、文言として出力させる
+			System.out.println("【先頭探索】検索した値は、array配列要素の[" + topSearch + "]にあります");
+
+			// 探索結果を探索メソッドを使用し、文言として出力させる
+			System.out.println("【末尾探索】検索した値は、array配列要素の[" + bottomSearch + "]にあります");
+		}
+
 	}
 
 }
