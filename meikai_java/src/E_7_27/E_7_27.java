@@ -15,12 +15,16 @@ public class E_7_27 {
 
 	/**
 	 * 取得した配列の要素数が同一か判定し、同一であれば引数x,yを加算するメソッド
+	 * 
 	 * @param x：一つ目の配列を取得する
 	 * @param y：二つ目の配列を取得する
 	 * @param z：三つ目の配列を取得する
 	 * @return：取得した配列の要素数が同一の場合、true。等しくなければfalseを返却する
 	 */
 	static boolean addMatrix(int[][] x, int[][] y, int[][] z) {
+
+		//配列の要素数が同一か判定を行うため、booleanフラグを定義する
+		boolean arraySameFlg= true;
 
 		//取得した引数の要素数が同一の場合
 		if (x.length == y.length && y.length == z.length) {
@@ -35,21 +39,22 @@ public class E_7_27 {
 					}
 					//取得した配列の要素数が同一ではない場合
 				} else {
-					//falseを返却するため、rerturnを定義する
-					return false;
+					//falseを返却するため、falseを代入させる
+					arraySameFlg = false;
 				}
 			}
-			//繰り返し処理終了後、trueを返却するため、return文を定義する
-			return true;
-			//取得した引数の要素数が同一ではない場合
+		//取得した引数の要素数が同一ではない場合
 		} else {
-			//falseを返却するため、rerturnを定義する
-			return false;
+			// falseを返却するため、falseを代入させる
+			arraySameFlg = false;
 		}
+		//判定結果を返却するため、return文を定義する
+		return arraySameFlg;
 	}
 
 	/**
 	 * 取得した引数を出力させるメソッド
+	 * 
 	 * @param array：二次元配列を取得
 	 */
 	static void printMatrix(int[][] array) {
@@ -86,7 +91,7 @@ public class E_7_27 {
 			//メソッドで呼び出した結果を出力させる
 			System.out.print("結果：");
 			System.out.println(addMatrix(arrayA, arrayB, arrayC));
-		//メソッドで呼び出し、結果がtrue以外だった場合
+			//メソッドで呼び出し、結果がtrue以外だった場合
 		} else {
 			//メソッドで呼び出した結果を出力させる
 			System.out.print("結果：");
