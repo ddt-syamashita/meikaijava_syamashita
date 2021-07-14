@@ -20,10 +20,12 @@ public class E_7_28 {
 	static int[][] addMatrix(int[][] x, int[][] y) {
 
 		//返却用の二次元配列を生成する
-		int[][] resultArray = new int[2][3];
+		int[][] resultArray = new int[x.length][];
 
 		//取得した配列の要素数分繰り返す処理を行うため、for文を定義する
 		for (int i = 0; i < x.length; i++) {
+			//返却用の二次元配列の列数を指定するため、引数で取得した値を要素数として定義する
+			resultArray[i] = new int[x[i].length];
 			//取得した配列の2行目の各要素分繰り返す処理を行うため、for文を定義する
 			for (int j = 0; j < x[i].length; j++) {
 				//結果返却用の配列に取得した配列の要素数の和を代入させる
