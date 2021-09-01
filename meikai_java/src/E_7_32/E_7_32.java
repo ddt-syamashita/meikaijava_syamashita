@@ -23,7 +23,7 @@ public class E_7_32 {
 	 */
 	static void printBits(byte x) {
 		// ビット構成を表示させるため、繰り返す処理を行う
-		for (int i = 31; i >= 0; i--) {
+		for (int i = 7; i >= 0; i--) {
 			// 第iビットが1であるかを調査し、結果1であれば、1と表示し、0であれば、0と表示させる
 			System.out.print(((x >>> i & 1) == 1) ? '1' : '0');
 		}
@@ -38,7 +38,7 @@ public class E_7_32 {
 	 */
 	static void printBits(short x) {
 		// ビット構成を表示させるため、繰り返す処理を行う
-		for (int i = 31; i >= 0; i--) {
+		for (int i = 15; i >= 0; i--) {
 			// 第iビットが1であるかを調査し、結果1であれば、1と表示し、0であれば、0と表示させる
 			System.out.print(((x >>> i & 1) == 1) ? '1' : '0');
 		}
@@ -68,7 +68,7 @@ public class E_7_32 {
 	 */
 	static void printBits(long x) {
 		// ビット構成を表示させるため、繰り返す処理を行う
-		for (int i = 31; i >= 0; i--) {
+		for (int i = 63; i >= 0; i--) {
 			// 第iビットが1であるかを調査し、結果1であれば、1と表示し、0であれば、0と表示させる
 			System.out.print(((x >>> i & 1) == 1) ? '1' : '0');
 		}
