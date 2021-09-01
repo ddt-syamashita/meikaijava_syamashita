@@ -20,12 +20,14 @@ public class E_7_29 {
 	static int[][] aryClone2(int[][] a) {
 
 		// 返却する二次元配列を取得した配列の要素数分生成する
-		int[][] arrayClone = new int[a.length][a[0].length];
+		int[][] arrayClone = new int[a.length][];
 
 		// 取得した配列の各要素を返却する二次元配列に代入させるため、for文を定義する
-		for (int i = 0; i < arrayClone.length; i++) {
+		for (int i = 0; i < a.length; i++) {
+			// 行の要素数を指定するため、取得した配列の要素数分生成する
+			arrayClone[i] = new int[a[i].length];
 			// 取得した配列の行分繰り返す処理を行うため、for文を定義する
-			for (int j = 0; j < arrayClone[i].length; j++) {
+			for (int j = 0; j < a[i].length; j++) {
 				// 取得した配列の各要素を返却する配列に代入させる
 				arrayClone[i][j] = a[i][j];
 			}
@@ -34,24 +36,36 @@ public class E_7_29 {
 		return arrayClone;
 	}
 
+	/**
+	 * 取得した引数を出力させるメソッド
+	 * 
+	 * @param array：二次元配列を取得
+	 */
+	static void printMatrix(int[][] array) {
+		for (int i = 0; i < array.length; i++) {
+			for (int j = 0; j < array[i].length; j++) {
+				System.out.print(array[i][j] + "  ");
+			}
+			System.out.println();
+		}
+	}
+
 	public static void main(String[] args) {
 
 		// 二次元配列を生成する
-		int[][] array = { { 2, 2, 99 }, { 3, 3, 3 } };
+		int[][] array = { { 2, 2, 99, }, { 3, 3, 333, 444 } };
 
 		// 複製メソッドを代入させた二次元配列を生成する
 		int[][] cloneResult = aryClone2(array);
 
-		// 複製した配列の要素数分繰り返す処理を行うため、for文を定義する
-		for (int i = 0; i < cloneResult.length; i++) {
-			// 生成した配列の行分繰り返す処理を行うため、for文を定義する
-			for (int j = 0; j < array[i].length; j++) {
-				// 各要素を出力させる
-				System.out.print(cloneResult[i][j] + "  ");
-			}
-			// 行を出力後、改行表示させるため、printlnを定義する
-			System.out.println();
-		}
+		// 生成した2次元配列をprintMatrix関数で出力する
+		System.out.println("行列array");
+		printMatrix(array);
+
+		// 複製された2次元配列をprintMatrix関数で出力する
+		System.out.println("2次元配列の複製");
+		printMatrix(cloneResult);
+
 	}
 
 }
