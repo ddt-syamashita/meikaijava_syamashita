@@ -49,12 +49,12 @@ public class E_7_30 {
 		int minResult = a;
 
 		//二つ目の引数より一つ目の引数が大きい場合
-		if (b < a) {
+		if (b < minResult) {
 			//二つ目の引数を返却用の変数に代入させる
 			minResult = b;
 		}
 		//三つ目の引数より二つ目の引数が大きい場合
-		if (c < b) {
+		if (c < minResult) {
 			//三つ目の引数を返却用の変数に代入させる
 			minResult = c;
 		}
