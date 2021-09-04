@@ -19,11 +19,11 @@ public class E_7_33 {
 	/**
 	 * 1次元配列の全要素値を出力するメソッド
 	 * 
-	 * @param a:1次元配列を取得する
+	 * @param a:1次元配列を取得
 	 */
 	static void printArray(int[] a) {
 
-		//取得した配列の要素数分繰り返すため、for文を定義する
+		// 取得した配列の要素数分繰り返すため、for文を定義する
 		for (int i = 0; i < a.length; i++) {
 			System.out.print(a[i] + " ");
 		}
@@ -32,7 +32,7 @@ public class E_7_33 {
 	/**
 	 * 2次元配列の全要素値を出力するメソッド
 	 * 
-	 * @param a:2次元配列を取得する
+	 * @param a:2次元配列を取得
 	 */
 	static void printArray(int[][] a) {
 
@@ -41,14 +41,8 @@ public class E_7_33 {
 			// 2次元配列の各列の要素数分繰り返すため、for文を定義する
 			for (int j = 0; j < a[i].length; j++) {
 
-				// 各列の桁数をmaxDigitメソッドで求めるため、繰り返し処理を定義する
-				for (int n = 0; n < a[i].length; n++) {
-					// 列の要素の繰り返し変数jと、桁数を求める繰り返し変数nの値が一致した場合
-					if (j == n) {
-						// 最大桁数を整数値で受け取り、出力結果の先頭を揃わせるため、printfで表示桁数を指定する
-						System.out.printf("%" + -(maxDigit(a, n)) + "d" + " ", a[i][j]);
-					}
-				}
+				// 各列の最大桁数を整数値で受け取り、出力結果の先頭を揃わせるため、printfで表示桁数を指定する
+				System.out.printf("%" + -(maxColumDigit(a, j)) + "d" + " ", a[i][j]);
 			}
 			// 各列の表示が出力されたあと、改行させるため、printlnを定義する
 			System.out.println();
@@ -56,13 +50,13 @@ public class E_7_33 {
 	}
 
 	/**
-	 * 最大桁数を求めるメソッド
+	 * 各列の最大桁数を求めるメソッド
 	 * 
-	 * @param getArray：2次元配列を取得する
-	 * @param getLoopPosition：繰り返しの値を取得する
+	 * @param getArray：2次元配列を取得
+	 * @param getColumPosition：繰り返し中、何列目の値として取得
 	 * @return：2次元配列の最大桁数をint型整数値として返却する
 	 */
-	static int maxDigit(int[][] getArray, int getLoopPosition) {
+	static int maxColumDigit(int[][] getArray, int getColumPosition) {
 
 		// 桁数を求めるため、String型文字列変数を定義する
 		String digitNumber = "";
@@ -73,8 +67,8 @@ public class E_7_33 {
 			// 2次元配列の各要素数分繰り返すため、for文を定義する
 			for (int j = 0; j < getArray[i].length; j++) {
 
-				// 繰り返し変数と、引数getLoopPositionの値が一致している場合
-				if (j == getLoopPosition) {
+				// 繰り返し変数と、引数getColumPositionの値が一致している場合
+				if (j == getColumPosition) {
 
 					// 桁数を求めるString変数の桁数より、取得した2次元配列の桁数が大きい場合
 					if (digitNumber.length() < Integer.toString(getArray[i][j]).length()) {
