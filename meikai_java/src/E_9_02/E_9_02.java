@@ -31,48 +31,48 @@ public class E_9_02 {
 		int inputDate = standardInput.nextInt();
 
 		// 引数なしコンストラクタのDayクラスをインスタンス化する
-		Day testDay1 = new Day();
+		Day withoutArgumentsDay = new Day();
 
 		// 引数yearのみのコンストラクタのDayクラスをインスタンス化する
-		Day testDay2 = new Day(inputYear);
+		Day yearArgumentsDay = new Day(inputYear);
 
 		// 引数year,monthのコンストラクタのDayクラスをインスタンス化する
-		Day testDay3 = new Day(inputYear, inputMonth);
+		Day yearMontthArgumentsDay = new Day(inputYear, inputMonth);
 
 		// 引数year,month,dateのコンストラクタのDayクラスをインスタンス化する
-		Day testDay4 = new Day(inputYear, inputMonth, inputDate);
+		Day yearMonthDateArgumentsDay = new Day(inputYear, inputMonth, inputDate);
 
-		// 引数year,month,dateのコンストラクタのday1をインスタンス化する
-		Day day1 = new Day(inputYear, inputMonth, inputDate);
+		// 引数year,month,dateのコンストラクタの比較用Day1つ目をインスタンス化する
+		Day comparisonDay1 = new Day(inputYear, inputMonth, inputDate);
 
 		//インスタンス化したday1の値を出力する
-		System.out.println("day1 = " + day1);
+		System.out.println("comparisonDay1 = " + comparisonDay1);
 
 		//day1を引数としてday2をインスタンス化する
-		Day day2 = new Day(day1);
+		Day comparisonDay2 = new Day(comparisonDay1);
 
 		//作成した旨の文言を出力する
-		System.out.println("day2をday1と同じ日付として作成しました。");
+		System.out.println("comparisonDay2をcomparisonDay1と同じ日付として作成しました。");
 
 		//インスタンス化したday2の値を出力する
-		System.out.println("day2 = " + day2);
+		System.out.println("comparisonDay2 = " + comparisonDay2);
 
 		// インスタンス化したday1とday2の日付が一致している場合
-		if (day1.equalTo(day2)) {
-			System.out.println("day1とday2は等しいです。");
+		if (comparisonDay1.equalTo(comparisonDay2)) {
+			System.out.println("comparisonDay1とcomparisonDay2は等しいです。");
 			// 日付が一致していない場合
 		} else {
-			System.out.println("day1とday2は等しくありません。");
+			System.out.println("comparisonDay1とcomparisonDay2は等しくありません。");
 		}
 
 		// 各コンストラクタを使用したクラスの値を出力する
-		System.out.println("testDay1：" + testDay1);
+		System.out.println("引数なしコンストラクタ：" + withoutArgumentsDay);
 
-		System.out.println("testDay2：" + testDay2);
+		System.out.println("引数yearのみのコンストラクタ：" + yearArgumentsDay);
 
-		System.out.println("testDay3：" + testDay3);
+		System.out.println("引数year,monthのコンストラクタ：" + yearMontthArgumentsDay);
 
-		System.out.println("testDay4：" + testDay4);
+		System.out.println("引数year,month,dateのコンストラクタ：" + yearMonthDateArgumentsDay);
 
 	}
 
