@@ -1,5 +1,8 @@
 package E_9_03;
 
+/**
+ * アカウントクラス
+ */
 public class Account {
 
 	// 口座名義
@@ -53,9 +56,10 @@ public class Account {
 	/**
 	 * 口座開設日を調べるため、フィールド変数dayを返却させるメソッド
 	 * 
-	 * @return：口座開設日を返却させる
+	 * @return：新たにインスタンスを生成し、口座開設日を返却
 	 */
 	public Day getDay() {
+		// フィールドの値を変更させないため、新たにインスタンスを生成し、その値を返却する
 		return new Day(day);
 	}
 
