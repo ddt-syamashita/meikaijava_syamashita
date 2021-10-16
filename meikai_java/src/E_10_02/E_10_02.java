@@ -11,17 +11,28 @@
 
 package E_10_02;
 
+import java.util.Scanner;
+
 public class E_10_02 {
 
 	public static void main(String[] args) {
 
+		//Scannerクラスをインスタンス化
+		Scanner standardInput = new Scanner(System.in);
+				
 		// ExIdクラスをまず3つインスタンス化する
 		ExId testId1 = new ExId();
 		ExId testId2 = new ExId();
 		ExId testId3 = new ExId();
-
+		
+		//識別番号の入力を促す文言を出力
+		System.out.print("識別番号：");
+		
+		//識別番号を入力値で代入させるため、int型変数に代入させる
+		int inputValue = standardInput.nextInt();
+		
 		// インスタンスに与える識別番号を4に変更する
-		ExId.changeN(4);
+		ExId.changeN(inputValue);
 
 		// ExIdクラスを3つインスタンス化する
 		ExId testId4 = new ExId();
