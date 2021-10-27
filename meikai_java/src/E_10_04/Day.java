@@ -80,8 +80,11 @@ public class Day {
 	 */
 	private static int dayOfMonth(int year, int month) {
 
+		//閏年の場合、1を代入、それ以外の場合、0を代入
+		final int LEAP_YERA_CHECK = leapYear(year) ? 1 : 0; 
+		
 		// 引数の年月値から、その月の日数としての要素を返却する
-		return monthDays[leapYear(year) ? 1 : 0][month - 1];
+		return monthDays[LEAP_YERA_CHECK][month - 1];
 	}
 
 	/**
