@@ -20,9 +20,8 @@ public class TimeAccount extends Account {
 	
 	/**
 	 * 定期預金を解約して全額を普通預金に移すメソッド
-	 * @param k：定期預金の残高を取得
 	 */
-	void cancel(long k) {
+	void cancel() {
 		deposit(timeBalance);
 		timeBalance = 0;
 	}

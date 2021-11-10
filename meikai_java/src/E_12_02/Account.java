@@ -18,7 +18,7 @@ public class Account {
 	private long timeBalance;
 	
 	//識別番号
-	int id;
+	private int id;
 	
 	
 	
