@@ -35,13 +35,19 @@ public class E_13_01 {
 
 			// 図形の種類を入力値で指定するため、代入させるint型変数に代入させる変数を定義
 			int inputMenu = 0;
+			
+			// 各図形の種類に対し、定数値を定義
+			final int POINT = 1;
+			final int HORIZONTAL = 2;
+			final int VERTICAL = 3;
+			final int RECTANGLE = 4;
 
 			// 0～4の値が入力されるまで繰り返させるため、do文を定義する
 			do {
 				// 入力を促す文言を出力し、入力値をint型変数に代入させる
 				System.out.print((i + 1) + "番の図形の種類（1・・・点／2・・・水平直線／3・・・垂直直線／4・・・長方形）：");
 				inputMenu = standardInput.nextInt();
-			} while (inputMenu <= 0 || inputMenu > 4);
+			} while (inputMenu < POINT || inputMenu > RECTANGLE);
 
 			// 長さ、幅、高さを入力値から取得させるため、int型変数を定義
 			int inputLength;
@@ -51,12 +57,12 @@ public class E_13_01 {
 			// 図形の種類を1～4の入力値からそれぞれ分岐させるため、switch文を定義
 			switch (inputMenu) {
 			// 図形の種類1の分岐
-			case 1:
+			case POINT:
 				// 派生したPointクラスをインスタンス化
 				shapeArray[i] = new Point();
 				break;
 			// 図形の種類2の分岐
-			case 2:
+			case HORIZONTAL:
 				// 長さの入力を促す文言を出力し、入力値を変数に代入させる
 				System.out.print("長さ：");
 				inputLength = standardInput.nextInt();
@@ -64,7 +70,7 @@ public class E_13_01 {
 				shapeArray[i] = new HorzLine(inputLength);
 				break;
 			// 図形の種類3の分岐
-			case 3:
+			case VERTICAL:
 				// 長さの入力を促す文言を出力し、入力値を変数に代入させる
 				System.out.print("長さ：");
 				inputLength = standardInput.nextInt();
@@ -72,7 +78,7 @@ public class E_13_01 {
 				shapeArray[i] = new VirtLine(inputLength);
 				break;
 			// 図形の種類4の分岐
-			case 4:
+			case RECTANGLE:
 				// 幅の入力を促す文言を出力し、入力値を変数に代入させる
 				System.out.print("幅　：");
 				inputWidth = standardInput.nextInt();
@@ -87,9 +93,9 @@ public class E_13_01 {
 		}
 
 		// ShapeクラスのshapeArrayの全要素を出力させるため、拡張for文を定義
-		for (Shape s : shapeArray) {
+		for (Shape shape : shapeArray) {
 			// printメソッドで全要素を出力させる
-			s.print();
+			shape.print();
 			// 出力後、コンソール上で確認しやすいよう改行させる
 			System.out.println();
 		}
