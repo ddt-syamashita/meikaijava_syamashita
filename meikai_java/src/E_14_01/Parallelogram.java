@@ -27,7 +27,7 @@ public class Parallelogram extends Shape implements Plane2D {
 	}
 
 	/**
-	 * 図形を描画売るメソッド
+	 * 図形を描画するメソッド
 	 */
 	public void draw() {
 		for (int i = 1; i <= height; i++) {
