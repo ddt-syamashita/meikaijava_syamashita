@@ -86,9 +86,9 @@ public class E_13_02 {
 		}
 
 		// ShapeクラスのtriangleArrayの全要素を出力させるため、拡張for文を定義
-		for (AbstTriangle s : triangleArray) {
+		for (AbstTriangle triangle : triangleArray) {
 			// printメソッドで全要素を出力させる
-			s.print();
+			triangle.print();
 			// 出力後、コンソール上で確認しやすいよう改行させる
 			System.out.println();
 		}

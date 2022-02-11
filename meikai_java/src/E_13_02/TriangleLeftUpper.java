@@ -10,11 +10,6 @@ package E_13_02;
 public class TriangleLeftUpper extends AbstTriangle {
 
 	/**
-	 * 直線の長さを表すint型のフィールドです。
-	 */
-	private int length;
-
-	/**
 	 * 直線を生成するコンストラクタです。 長さを引数として受け取ります。
 	 * 
 	 * @param：length 生成する直線の長さ。

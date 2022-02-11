@@ -40,13 +40,4 @@ public abstract class AbstTriangle extends Shape {
 		this.length = length;
 	}
 
-	/**
-	 * メソッドtoStringは、直線に関する図形情報を表す文字列を返却します。
-	 * 
-	 * @retun 文字列"AbstLine(length:3"を返却します。3の部分は長さに応じた値です。
-	 */
-	public String toString() {
-		return "AbstTriangle(length：" + length + ")";
-	}
-
 }
