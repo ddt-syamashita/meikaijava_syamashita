@@ -16,6 +16,8 @@ public class E_14_02 {
 
 		// Scannerクラスをインスタンス化
 		Scanner standardInput = new Scanner(System.in);
+		
+		System.out.println("--ペットに関する入力-------");
 
 		System.out.print("ペットの名前：");
 		
@@ -33,8 +35,15 @@ public class E_14_02 {
 		//introduceメソッドを使用し、自己紹介を出力する
 		pet.introduce();
 		
-		//　身体の色を変更するchangeSkinメソッドを使用する
-		pet.changeSkin(9);
+		System.out.print("下記の数値から毛並みの色を選んでください。\n　0：黒色/1：赤色/2：緑色/3：青色/4：豹柄/5：茶色/6：銀色/7：白色 \n入力値：");
+		
+		// 入力値をペットの毛並みの色としてint型変数に代入させる
+		int inputPetColor = standardInput.nextInt();
+		
+		//　ペットの毛並みの色を変更するchangeSkinメソッドを使用する
+		pet.changeSkin(inputPetColor);
+		
+		System.out.println("\n--ロボットに関する入力-------");
 
 		System.out.print("ロボットの名前：");
 
@@ -49,19 +58,24 @@ public class E_14_02 {
 		// RobotPetクラスをインスタンスする。引数に各入力値の変数を定義する
 		RobotPet robot = new RobotPet(inputRobotName, inputRobotMasterName);
 
-		System.out.print("依頼する家事を選択してください。 0：掃除／1：洗濯／2：炊事  入力値：");
-
 		// introduceメソッドを使用し、ロボットの自己紹介を出力する
 		robot.introduce();
+		
+		System.out.print("依頼する家事を選択してください。 0：掃除／1：洗濯／2：炊事  入力値：");
 
 		// 家事の選択肢を入力値として取得するため、int型を変数し代入させる
 		int inputWork = standardInput.nextInt();
 
 		// workメソッドを使用し、家事を洗濯する
 		robot.work(inputWork);
+		
+		System.out.print("\n下記の数値から機体の色を選んでください。\n　0：黒色/1：赤色/2：緑色/3：青色/4：豹柄/5：茶色/6：銀色/7：白色 \n入力値：");
+		
+		// 入力値をペットの毛並みの色としてint型変数に代入させる
+		int inputRobotColor = standardInput.nextInt();
 
 		// 機体の色を変更するchangeSkinメソッドを使用する
-		robot.changeSkin(3);
+		robot.changeSkin(inputRobotColor);
 
 	}
 
