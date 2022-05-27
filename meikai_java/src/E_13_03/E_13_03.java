@@ -26,16 +26,16 @@ public class E_13_03 {
 
 		// resultHandメソッドを使用し、出した手の値をhumanHand変数に代入する
 		int humanHand = human.resultHand();
-		
+
 		// resultHandメソッドを使用し、出した手の値をcomputerHand変数に代入する
 		int computerHand = computer.resultHand();
 
+		// 出した手の文字列を配列で定義
+		String[] hands = { "グー", "チョキ", "パー" };
 
 		// プレーヤの出した手の文言を出力する
-		System.out.println("あなた：" + human.getHand());
-
-		// コンピュータの出した手の文言を出力する
-		System.out.println("コンピュータ：" + computer.getHand());
+		System.out.println("私は「" + hands[humanHand] + "」を出しました" );
+		System.out.println("コンピュータは「" + hands[computerHand] + "」を出しました");
 
 		// じゃんけんの勝敗判定を行うため、判定変数を定義する
 		int resultJudge = (humanHand - computerHand + 3) % 3;
@@ -43,18 +43,18 @@ public class E_13_03 {
 		// じゃんけんの結果を表示させるため、文言を出力する
 		System.out.print("じゃんけんの結果：");
 
-		//　resultJudgeに代入された判定結果を0～2の値によって、分岐させるためswitch文を定義する
+		// resultJudgeに代入された判定結果を0～2の値によって、分岐させるためswitch文を定義する
 		switch (resultJudge) {
-		//resultJudge変数の値が0の場合
+		// resultJudge変数の値が0の場合
 		case 0:
-			//あいこの文言を出力する
+			// あいこの文言を出力する
 			System.out.println("あいこです。");
 			break;
-		//resultJudge変数の値が1の場合
+		// resultJudge変数の値が1の場合
 		case 1:
 			System.out.println("あなたの負けです。");
 			break;
-		//resultJudge変数の値が2の場合
+		// resultJudge変数の値が2の場合
 		case 2:
 			System.out.println("あなたの勝ちです！");
 			break;
