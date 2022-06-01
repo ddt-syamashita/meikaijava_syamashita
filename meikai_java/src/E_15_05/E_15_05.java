@@ -19,9 +19,6 @@ public class E_15_05 {
 		// Scannerクラスをインスタンス化
 		Scanner standardInput = new Scanner(System.in);
 
-		// 人間プレーヤクラスをインスタンス化する。
-		HumanPlayer human = new HumanPlayer();
-
 		// 1人目のコンピュータをインスタンス化する
 		ComputerPlayer computer1 = new ComputerPlayer();
 
@@ -41,7 +38,7 @@ public class E_15_05 {
 			int computer2Hand = computer2.resultHand();
 
 			// 人間プレーヤの手を生成する
-			int humanHand = human.resultHand();
+			int humanHand = new HumanPlayer().resultHand();
 
 			// ３人の出した手を出力する
 			System.out.printf("それぞれ出した手は下記となります。\nコンピュータ１：" + hands[computer1Hand] + "\nコンピュータ2：" + hands[computer2Hand]
