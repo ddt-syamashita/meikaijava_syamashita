@@ -30,6 +30,9 @@ public class E_15_05 {
 
 		// もう一度ジャンケンするのか判定する変更を定義
 		int retry;
+		
+		// 出した手の文字列を配列で定義
+		String[] hands = { "グー", "チョキ", "パー" };
 
 		do {
 
@@ -41,8 +44,8 @@ public class E_15_05 {
 			int humanHand = human.resultHand();
 
 			// ３人の出した手を出力する
-			System.out.printf("それぞれ出した手は下記となります。\nコンピュータ１：" + computer1.getHand() + "\nコンピュータ2：" + computer2.getHand()
-					+ "\nプレーヤ：" + human.getHand() + "\n");
+			System.out.printf("それぞれ出した手は下記となります。\nコンピュータ１：" + hands[computer1Hand] + "\nコンピュータ2：" + hands[computer2Hand]
+					+ "\nプレーヤ：" + hands[humanHand] + "\n");
 
 			// 人間プレーヤとコンピュータ１のじゃんけんの結果判定
 			int result1 = (humanHand - computer1Hand + 3) % 3;

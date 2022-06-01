@@ -10,23 +10,4 @@ public abstract class Player {
 	 */
 	public abstract int resultHand();
 
-	/**
-	 * 出した手の文言を出力するメソッド
-	 * 
-	 * @return：「0＝グー、1＝チョキ、2＝パー」 それぞれの文言を返却
-	 */
-	public String getHand() {
-
-		// handの値が0だった場合
-		if (hand == 0) {
-			return "「グー」 を出しました。";
-			// handの値が1だった場合
-		} else if (hand == 1) {
-			return "「チョキ」　を出しました。";
-			// handの値が0と1以外だった場合
-		} else {
-			return "「パー」 を出しました。";
-		}
-	}
-
 }
